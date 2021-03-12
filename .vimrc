@@ -18,8 +18,16 @@ set autoindent
 set ruler
 set backspace=indent,eol,start
 
+let mapleader = "\<Space>"
+
 nnoremap j gj
 nnoremap k gk
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>N :NERDTree<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 
 inoremap <Esc> <C-[>
 inoremap <C-a> <Home>
@@ -36,3 +44,12 @@ inoremap <C-w> <C-o>db
 
 syntax on
 
+call plug#begin('~/.vim/plugged')
+Plug 'fatih/vim-go'
+call plug#end()
+
+let g:go_fmt_command = "goimports"
+
+call plug#begin()
+  Plug 'preservim/nerdtree'
+call plug#end()

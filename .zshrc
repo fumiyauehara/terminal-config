@@ -78,3 +78,5 @@ fi
 ##-----------------------------------
 zstyle ':prezto:module:prompt' theme 'pure'
 
+# github cli
+eval "$(gh completion -s zsh)"
