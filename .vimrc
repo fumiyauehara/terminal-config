@@ -19,6 +19,7 @@ set ruler
 set backspace=indent,eol,start
 
 let mapleader = "\<Space>"
+let maplocalleader="\\"
 
 nnoremap j gj
 nnoremap k gk
@@ -44,12 +45,6 @@ inoremap <C-w> <C-o>db
 
 syntax on
 
-call plug#begin('~/.vim/plugged')
-Plug 'fatih/vim-go'
-call plug#end()
+packloadall
+silent! helptags ALL
 
-let g:go_fmt_command = "goimports"
-
-call plug#begin()
-  Plug 'preservim/nerdtree'
-call plug#end()
